@@ -1,100 +1,3 @@
-// const Product = require("../models/productModels");
-// const productObj = new Product();
-
-// module.exports = {
-//     getCarouselImages: async (req, res) => {
-//         try {
-//             const ImageResult = await productObj.getCarouselImages();
-//             console.log(ImageResult);
-//             if (ImageResult.length > 0) {
-//                 const ImageResultJSON = JSON.stringify(ImageResult);
-//                 console.log(ImageResultJSON);
-//                 res.status(200).json(ImageResultJSON);
-//             } else {
-//                 res.status(404).json({
-//                     message: "No images found",
-//                 });
-//             }
-//         } catch (err) {
-//             console.error(err); // Log the specific error for debugging
-//             res.status(500).json({
-//                 message: "An error occurred",
-//                 error: err.message,
-//             });
-//         }
-//     },
-
-//     getCategories: async (req, res) => {
-//         try {
-//             const categoryResult = await productObj.getCategories();
-//             console.log(categoryResult);
-//             if (categoryResult.length > 0) {
-//                 const categoryResultJSON = JSON.stringify(categoryResult);
-//                 console.log(categoryResultJSON);
-//                 res.status(200).json(categoryResultJSON);
-//             } else {
-//                 res.status(404).json({
-//                     message: "No categories found",
-//                 });
-//             }
-//         } catch (err) {
-//             console.error(err); // Log the specific error for debugging
-//             res.status(500).json({
-//                 message: "An error occurred",
-//                 error: err.message,
-//             });
-//         }
-//     },
-
-//     postCategoryID : async (req, res) => {
-//         try {
-//             const categoryID = req.body.selectedCategoryID;
-//             console.log("categoryID",categoryID);
-//             // const subCategory = await productObj.getSubCategories(categoryID);
-            
-//             // if (subCategory.length > 0) {
-//             //     const subCategoryJSON = JSON.stringify(subCategory);
-//             //     console.log(subCategoryJSON);
-//             //     res.status(200).json(categoryNameJSON);
-//             // } else {
-//             //     res.status(404).json({
-//             //         message: "No categories found",
-//             //     });
-//             // }
-//         } catch (err) {
-//             console.error(err); // Log the specific error for debugging
-//             res.status(500).json({
-//                 message: "An error occurred",
-//                 error: err.message,
-//             });
-//         }
-//     },
-
-//     getSubCategories: async (req, res) => {
-//         try {
-//             const categoryID = req.body.selectedCategoryID;
-//             console.log("parent categoryID that want to get sub categories",categoryID);
-//             const subCategory = await productObj.getSubCategories(categoryID);
-//             console.log("sub category",subCategory);
-//             if (subCategory.length > 0) {
-//                 const subCategoryJSON = JSON.stringify(subCategory);
-//                 console.log(subCategoryJSON);
-//                 res.status(200).json(subCategoryJSON);
-//             } else {
-//                 res.status(404).json({
-//                     message: "No categories found",
-//                 });
-//             }
-//         } catch (err) {
-//             console.error(err); // Log the specific error for debugging
-//             res.status(500).json({
-//                 message: "An error occurred",
-//                 error: err.message,
-//             });
-//         }
-//     },
-// }   
-
 const Product = require("../models/productModels");
 const productObj = new Product();
 
@@ -336,8 +239,6 @@ module.exports = {
         });
 
             const result = Object.values(transformedData);
-
-
             res.status(200).json(result);
 
         }
@@ -407,14 +308,6 @@ module.exports = {
 
             await productObj.insertCartItem(userId,variantId,cartItemQuantity);
              
-
-
-         
-            // const variantItemDetails = await productObj.getVariantItemDetails(selectedVariantID);
-            // const variantItemDetailsJSON = JSON.stringify(variantItemDetails);
-            // console.log("Variant Item Details backend",variantItemDetailsJSON);
-            // res.status(200).json(variantItemDetailsJSON);
-
         } catch (err) {
             console.error(err);
             res.status(500).json({
@@ -424,29 +317,6 @@ module.exports = {
         }
     }, 
 
-
-// }
-//   getCarouselImages: async (req, res) => {
-//     try {
-//       const ImageResult = await productObj.getCarouselImages();
-//       console.log(ImageResult);
-//       if (ImageResult.length > 0) {
-//         const ImageResultJSON = JSON.stringify(ImageResult);
-//         console.log(ImageResultJSON);
-//         res.status(200).json(ImageResultJSON);
-//       } else {
-//         res.status(404).json({
-//           message: "No images found",
-//         });
-//       }
-//     } catch (err) {
-//       console.error(err); // Log the specific error for debugging
-//       res.status(500).json({
-//         message: "An error occurred",
-//         error: err.message,
-//       });
-//     }
-//   },
   getInventory: async (req, res) => {
     try {
       const InventoryArray = [];
