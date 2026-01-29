@@ -1,7 +1,6 @@
-import React from 'react';
 import ScrollCarousel from 'scroll-carousel-react';
 
-const Carousel = () => {
+function Carousel() {
 
   const imagePaths = [
     '/CarouselImages/cars.jpg',
@@ -17,7 +16,6 @@ const Carousel = () => {
     '/CarouselImages/televisions.jpeg',
     '/CarouselImages/kitchenappliances.jpeg'
     ];
-    
   const images = imagePaths.map((path, index) => ({
       Category_Image: path,
   }));

@@ -236,6 +236,7 @@ function Header({
                 {
                   cartVisibility === true && (
                     <Tooltip>
+                      <div>
                       <IconButton
                         sx={{ p: 2, color: "black", fontWeight: "bold" }}
                         onClick={handleOpen}
@@ -290,6 +291,7 @@ function Header({
                             </div>
                           </div>
                         </Popover>
+                      </div>
                       </div>
                     </Tooltip>
                   )

@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "react-bootstrap/Dropdown";
-import "./CartItems.css";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -13,6 +12,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { IoTrashBin } from "react-icons/io5";
 import Button from "react-bootstrap/Button";
+import "./CartItems.css";
 
 Axios.defaults.withCredentials = true;
 
@@ -127,27 +127,6 @@ export default function CartItems() {
   return (
     <div className="cart-container">
       <h2 className="cart-heading">Cart Items</h2>
-      {/* <ul className="cart-items-list">
-        {cartItems.map((order, index) => (
-          <li key={index} className="cart-item">
-            <strong className="item-label">Product Name:</strong>{" "}
-            {order.Product_Name}
-            <br />
-            <strong className="item-label">Quantity:</strong> {order.Quantity}
-            <br />
-            <strong className="item-label price-label">Price:</strong> $
-            {order.Price.toFixed(2)}
-            <br />
-            <button
-              className="remove-item-button"
-              onClick={() => removeFromCart(index)}
-            >
-              Remove
-            </button>
-            <hr />
-          </li>
-        ))}
-      </ul> */}
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>

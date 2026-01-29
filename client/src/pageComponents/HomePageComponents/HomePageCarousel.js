@@ -1,12 +1,12 @@
 import Carousel from '../../components/carousel'
 
-const HomePageCarousel = () => {
+function HomePageCarousel() {
   return (
     <div>
       <Carousel/>
     </div>
-
   )
 }
+
 export default HomePageCarousel
 

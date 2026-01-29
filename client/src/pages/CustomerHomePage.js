@@ -1,17 +1,15 @@
-import React from 'react'
 import CustomerHomePageItemDashBoard from '../pageComponents/CustomerHomePageComponents/CustomerHomePageItemDashBoard'
 import CustomerHomePageHeader from '../pageComponents/CustomerHomePageComponents/CustomerHomePageHeader'
-import CustomerHomePageCarousel from '../pageComponents/CustomerHomePageComponents/CustomerHomePageCarousel'
-const CustomerHomePage = () => {
+import HomePageCarousel from '../pageComponents/HomePageComponents/HomePageCarousel'
+
+function CustomerHomePage() {
   return (
     <div>
       <CustomerHomePageHeader/>
-      <CustomerHomePageCarousel/>
+      <HomePageCarousel/>
       <CustomerHomePageItemDashBoard/>
     </div>
   )
 }
 
 export default CustomerHomePage
-
-

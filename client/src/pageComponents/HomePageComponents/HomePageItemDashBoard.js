@@ -4,7 +4,8 @@ import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { CategoryContext } from "../../context/CategoryDetailsContext";
 
-const HomePageItemDashBoard = () => {
+function HomePageItemDashBoard() {
+  
   const { selectedCategory, setSelectedCategory } = useContext(CategoryContext);
   const navigate = useNavigate();
   const [categories, setCategories] = useState([]);

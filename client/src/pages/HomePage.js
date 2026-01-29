@@ -1,8 +1,8 @@
-import React from 'react'
 import HomePageHeader from '../pageComponents/HomePageComponents/HomePageHeader'
 import HomePageCarousel from '../pageComponents/HomePageComponents/HomePageCarousel'
 import HomePageItemDashBoard from '../pageComponents/HomePageComponents/HomePageItemDashBoard'
-const HomePage = () => {
+
+function HomePage() {
   return (
     <div>
       <HomePageHeader/>

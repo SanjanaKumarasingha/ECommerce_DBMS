@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import Header from '../../components/Header'
@@ -9,6 +9,7 @@ const CustomerHomePageHeader = () => {
   const [name, setName] = useState('');
   const [id, setId] = useState('');
   const navigate = useNavigate();
+
   useEffect(() => {
     axios.get('http://localhost:3005/user/getSession')
     .then(res => {
@@ -26,6 +27,7 @@ const CustomerHomePageHeader = () => {
     })
     .catch(err => console.log(err))
   }, [])
+  
   return (
     <div>
       <Header

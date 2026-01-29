@@ -1,7 +1,7 @@
-import React from 'react'
 import CartItems from '../pageComponents/CartPageComponent/CartItems'
 import CustomerHomePageHeader from '../pageComponents/CustomerHomePageComponents/CustomerHomePageHeader';
-export default function CartPage() {
+
+function CartPage() {
   return (
     <div>
       <CustomerHomePageHeader/>
@@ -9,3 +9,5 @@ export default function CartPage() {
     </div>
   )
 }
+
+export default CartPage;

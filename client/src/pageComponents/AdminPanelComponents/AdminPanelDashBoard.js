@@ -21,11 +21,13 @@ import {
 } from "recharts";
 
 function AdminPanelDashBoard() {
+
   const [QuarterlyReportsResult, setQuarterlyReportsResult] = useState([]);
   const [Product, setProduct] = useState("");
   const [Category, setCategory] = useState("");
   const [Customer, setCustomer] = useState("");
   const [Orders, setOrders] = useState("");
+  
   useEffect(() => {
     axios
       .post("http://localhost:3005/reports/getQuarterlyReports", {
