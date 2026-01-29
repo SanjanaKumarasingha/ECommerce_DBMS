@@ -293,41 +293,6 @@ function Header({
                       </div>
                     </Tooltip>
                   )
-
-                  //     id="cart-popover"
-                  //     open={Boolean(anchorEl)}
-                  //     anchorEl={anchorEl}
-                  //     onClose={handleClose}
-                  //     anchorOrigin={{
-                  //       vertical: 'bottom',
-                  //       horizontal: 'center',
-                  //     }}
-                  //     transformOrigin={{
-                  //       vertical: 'top',
-                  //       horizontal: 'center',
-                  //     }}
-                  //   >
-                  //     <div>
-                  //     <Typography sx={{ p: 2 }}>
-                  //       {cartItems.length > 0 ? (
-                  //         <div>
-                  //           <h4>Shopping Cart Items</h4>
-                  //           <ul>
-                  //             {cartItems.map((item, index) => (
-                  //               <li key={index}>
-                  //                 Product: {item.Product_Name}, Quantity: {item.Quantity}, Price: {item.Price}
-                  //               </li>
-                  //             ))}
-                  //           </ul>
-                  //         </div>
-                  //       ) : (
-                  //         <p>Your shopping cart is empty.</p>
-                  //       )}
-                  //     </Typography>
-                  //     </div>
-                  //   </Popover>
-                  //   </div>
-                  // </Tooltip>
                 }
 
                 <Tooltip title={linkName}>

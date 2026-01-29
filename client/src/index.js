@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
-import * as Icon from 'react-bootstrap-icons';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
 import CategoryDetailsContext from './context/CategoryDetailsContext';
 import ProductIDContext from './context/ProductIDContext';
 import VariantOptionsContext from './context/VariantOptionsContext';
 import  VarientItemContext  from './context/VariantIDContext';
-
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,12 +16,11 @@ root.render(
   <React.StrictMode>
     <CategoryDetailsContext>
       <ProductIDContext>
-
-        {/* <VariantOptionsContext> */}
-        <VarientItemContext>
-          <App />
-        </VarientItemContext>
-        {/* </VariantOptionsContext> */}
+        <VariantOptionsContext>
+          <VarientItemContext>
+            <App />
+          </VarientItemContext>
+        </VariantOptionsContext>
       </ProductIDContext>
     </CategoryDetailsContext>
   </React.StrictMode>
